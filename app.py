@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
 
 st.set_page_config(page_title="COVID-19 Dashboard", layout="wide")
 
@@ -18,7 +19,8 @@ st.markdown("<h1 style='text-align: center;'>🦠 COVID-19 Analytics Dashboard</
 st.markdown("---")
 
 # Load data
-df = pd.read_excel("covid_19_final_no_day_with_year_2020_2023.xlsx")
+file_path = os.path.join(os.getcwd(), "covid_19_final_no_day_with_year_2020_2023.xlsx")
+df = pd.read_excel(file_path)
 
 # Clean columns
 df.columns = df.columns.str.strip().str.lower().str.replace(" ", "_")
