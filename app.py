@@ -3,7 +3,11 @@ import pandas as pd
 import plotly.express as px
 import os
 
-st.set_page_config(page_title="COVID-19 Dashboard", layout="wide")
+st.set_page_config(
+    page_title="COVID-19 Dashboard",
+    page_icon="🦠",   # 👈 THIS changes the tab icon
+    layout="wide"
+)
 
 # Background styling
 st.markdown("""
